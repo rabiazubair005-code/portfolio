@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character Encoding & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Muhammad Taha - Passionate Web Developer & AI Solution Developer specializing in modern websites, Chrome extensions, AI-powered platforms, and e-commerce solutions.">
+  <meta name="keywords" content="Muhammad Taha, Web Developer, AI Developer, Portfolio, Chrome Extensions, E-Commerce, React, JavaScript, Python, Pakistan">
+  <meta name="author" content="Muhammad Taha">
+  <meta name="theme-color" content="#0a0a0f">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Muhammad Taha | Web Developer & AI Solution Developer">
+  <meta property="og:description" content="Passionate Web Developer & AI Solution Developer specializing in modern websites, Chrome extensions, AI-powered platforms, and e-commerce solutions.">
+  <meta property="og:type" content="website">
+
+  <title>Muhammad Taha | Web Developer & AI Solution Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== 1. PRELOADER ==================== -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-spinner"></div>
+      <div class="preloader-text neon-text">Muhammad Taha</div>
+      <div class="preloader-subtitle">Loading Portfolio...</div>
+    </div>
+  </div>
+
+  <!-- ==================== 2. SCROLL PROGRESS ==================== -->
+  <div id="scroll-progress"><div id="scroll-progress-bar"></div></div>
+
+  <!-- ==================== 3. CUSTOM CURSOR ==================== -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
+  <!-- ==================== 4. PARTICLE CANVAS ==================== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ==================== 5. NAVBAR ==================== -->
+  <header>
+    <nav id="navbar" aria-label="Main Navigation">
+      <div class="container">
+        <a href="#hero" class="nav-logo neon-text">MT<span class="logo-dot">.</span></a>
+
+        <ul id="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <button class="theme-toggle-btn glass" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <button id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== 6. HERO SECTION ==================== -->
+    <section id="hero" class="section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-greeting">Hello, I'm</span>
+          <h1 class="hero-name">Muhammad Taha</h1>
+          <div class="hero-title-wrapper">
+            <span class="hero-title-prefix">I'm a </span>
+            <span id="typed-text"></span>
+            <span id="typed-cursor">|</span>
+          </div>
+          <p class="hero-description">I am a passionate Web Developer and AI Solutions Developer specializing in creating modern, responsive websites, Chrome extensions, AI-powered platforms, and e-commerce solutions.</p>
+          <div class="hero-buttons">
+            <a class="btn-primary" href="#contact"><i class="fas fa-download"></i> Download CV</a>
+            <a class="btn-secondary" href="#contact"><i class="fas fa-handshake"></i> Hire Me</a>
+            <a class="btn-outline" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          </div>
+          <div class="hero-social">
+            <a href="mailto:muhammadtahag8t@gmail.com" class="social-link glass" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+923006412868" class="social-link glass" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="#" class="social-link glass" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link glass" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-ring">
+            <img class="hero-photo" src="assets/images/profile.jpg" alt="Muhammad Taha" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. ABOUT SECTION ==================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">About Me</h2>
+        <p class="section-subtitle scroll-reveal">Get to know me better</p>
+        <div class="about-grid">
+          <div class="about-text scroll-reveal">
+            <p>I am a passionate Web Developer and AI Solutions Developer with expertise in building modern, responsive, and user-friendly websites, web applications, Chrome extensions, AI-powered learning platforms, and e-commerce solutions. I enjoy transforming innovative ideas into high-quality digital products by combining clean design with efficient, scalable development.</p>
+            <p>I am always eager to take on new challenges, collaborate on exciting projects, and deliver professional solutions that exceed client expectations through creativity, technical expertise, and attention to detail.</p>
+            <p>Based in Punjab, Pakistan, I am constantly learning and exploring new technologies to stay at the forefront of web development and AI innovation.</p>
+          </div>
+          <div class="about-stats scroll-reveal">
+            <div class="stats-grid">
+              <div class="stat-item glass">
+                <span class="stat-number"><span class="counter" data-target="50">0</span>+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item glass">
+                <span class="stat-number"><span class="counter" data-target="30">0</span>+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+              <div class="stat-item glass">
+                <span class="stat-number"><span class="counter" data-target="10">0</span>+</span>
+                <span class="stat-label">Technologies</span>
+              </div>
+              <div class="stat-item glass">
+                <span class="stat-number"><span class="counter" data-target="2">0</span>+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. SKILLS SECTION ==================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">My Skills</h2>
+        <p class="section-subtitle scroll-reveal">Technologies and tools I work with</p>
+        <div class="skills-grid">
+
+          <!-- Web Development -->
+          <div class="skill-category glass scroll-reveal">
+            <h3 class="skill-category-title"><i class="fas fa-code"></i> Web Development</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">HTML5 & CSS3</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">React.js</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="78"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="92"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI & Applications -->
+          <div class="skill-category glass scroll-reveal">
+            <h3 class="skill-category-title"><i class="fas fa-robot"></i> AI & Applications</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">AI Tutor Development</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Machine Learning</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-percentage">72%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="72"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">API Integration</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="78"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">ChatBot Development</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="70"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extensions & E-Commerce -->
+          <div class="skill-category glass scroll-reveal">
+            <h3 class="skill-category-title"><i class="fas fa-puzzle-piece"></i> Extensions & E-Commerce</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Chrome Extensions</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Browser APIs</span>
+                <span class="skill-percentage">82%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="82"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">E-Commerce Platforms</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Payment Integration</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Shopify/WooCommerce</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="78"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. EXPERIENCE SECTION ==================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Experience</h2>
+        <p class="section-subtitle scroll-reveal">My professional journey</p>
+        <div class="timeline">
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2024 - Present</span>
+              <h3 class="timeline-title">AI Solutions Developer</h3>
+              <span class="timeline-company">Freelance</span>
+              <p class="timeline-description">Developing AI-powered learning platforms and intelligent tutoring systems. Building custom AI solutions that transform educational experiences through innovative technology.</p>
+            </div>
+          </div>
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2023 - Present</span>
+              <h3 class="timeline-title">Web Developer</h3>
+              <span class="timeline-company">Freelance</span>
+              <p class="timeline-description">Creating modern, responsive websites and web applications. Specializing in Chrome extension development and e-commerce solutions that exceed client expectations.</p>
+            </div>
+          </div>
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2023 - 2024</span>
+              <h3 class="timeline-title">Frontend Developer</h3>
+              <span class="timeline-company">Self-Employed</span>
+              <p class="timeline-description">Started professional journey building responsive websites, learning modern frameworks, and developing browser extensions. Focused on clean code and user experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. EDUCATION SECTION ==================== -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Education</h2>
+        <p class="section-subtitle scroll-reveal">My academic background</p>
+        <div class="timeline">
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2023 - Present</span>
+              <h3 class="timeline-title">O Level Studies</h3>
+              <span class="timeline-institution">Punjab, Pakistan</span>
+              <p class="timeline-description">Currently pursuing O Level studies with a strong passion for learning and personal growth. A motivated and curious student who enjoys developing new skills, solving problems, and continuously expanding knowledge. Alongside academic studies, actively exploring web development and AI technologies to build practical experience and prepare for a successful career in technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11. PROJECTS SECTION ==================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">My Projects</h2>
+        <p class="section-subtitle scroll-reveal">Some of my recent work</p>
+        <div class="projects-grid">
+
+          <!-- Project 1: NexaStore -->
+          <div class="project-card glass scroll-reveal">
+            <div class="project-image">
+              <div class="project-image-placeholder">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" class="project-overlay-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-overlay-link" title="Source Code"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">NexaStore</h3>
+              <p class="project-subtitle">E-Commerce Platform</p>
+              <p class="project-description">A full-featured e-commerce platform with product management, shopping cart, secure checkout, and responsive design for seamless shopping experience.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: AI LearnHub -->
+          <div class="project-card glass scroll-reveal">
+            <div class="project-image">
+              <div class="project-image-placeholder">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" class="project-overlay-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-overlay-link" title="Source Code"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">AI LearnHub</h3>
+              <p class="project-subtitle">AI Tutoring Platform</p>
+              <p class="project-description">An intelligent tutoring system powered by AI that provides personalized learning experiences, adaptive assessments, and real-time feedback.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">TensorFlow</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: WebGuard -->
+          <div class="project-card glass scroll-reveal">
+            <div class="project-image">
+              <div class="project-image-placeholder">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" class="project-overlay-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-overlay-link" title="Source Code"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">WebGuard</h3>
+              <p class="project-subtitle">Chrome Security Extension</p>
+              <p class="project-description">A Chrome browser extension that enhances web security with real-time threat detection, ad blocking, and privacy protection features.</p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Chrome APIs</span>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: DevPortfolio -->
+          <div class="project-card glass scroll-reveal">
+            <div class="project-image">
+              <div class="project-image-placeholder">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" class="project-overlay-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-overlay-link" title="Source Code"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">DevPortfolio</h3>
+              <p class="project-subtitle">Portfolio Generator</p>
+              <p class="project-description">A dynamic portfolio website generator that creates stunning developer portfolios with customizable themes, animations, and responsive layouts.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">GSAP</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: TaskFlow -->
+          <div class="project-card glass scroll-reveal">
+            <div class="project-image">
+              <div class="project-image-placeholder">
+                <i class="fas fa-list-check"></i>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" class="project-overlay-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-overlay-link" title="Source Code"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">TaskFlow</h3>
+              <p class="project-subtitle">Project Management App</p>
+              <p class="project-description">A collaborative project management web application with task tracking, team management, real-time updates, and intuitive drag-and-drop interface.</p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Express</span>
+                <span class="project-tag">MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: CodeHelper -->
+          <div class="project-card glass scroll-reveal">
+            <div class="project-image">
+              <div class="project-image-placeholder">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" class="project-overlay-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-overlay-link" title="Source Code"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">CodeHelper</h3>
+              <p class="project-subtitle">AI Code Assistant</p>
+              <p class="project-description">An AI-powered browser extension that assists developers with code completion, debugging suggestions, and documentation lookup directly in the browser.</p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">OpenAI API</span>
+                <span class="project-tag">Chrome APIs</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12. SERVICES SECTION ==================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">My Services</h2>
+        <p class="section-subtitle scroll-reveal">What I can do for you</p>
+        <div class="services-grid">
+
+          <div class="service-card glass scroll-reveal">
+            <div class="service-icon"><i class="fas fa-globe"></i></div>
+            <h3 class="service-title">Website Development</h3>
+            <p class="service-description">Building modern, responsive, and SEO-optimized websites that deliver exceptional user experiences and drive business growth.</p>
+          </div>
+
+          <div class="service-card glass scroll-reveal">
+            <div class="service-icon"><i class="fas fa-robot"></i></div>
+            <h3 class="service-title">AI Tutor Development</h3>
+            <p class="service-description">Creating intelligent tutoring systems and AI-powered learning platforms that personalize education and enhance student engagement.</p>
+          </div>
+
+          <div class="service-card glass scroll-reveal">
+            <div class="service-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h3 class="service-title">Chrome Extension Dev</h3>
+            <p class="service-description">Developing custom Chrome browser extensions that add powerful functionality, improve productivity, and enhance browsing experience.</p>
+          </div>
+
+          <div class="service-card glass scroll-reveal">
+            <div class="service-icon"><i class="fas fa-shopping-bag"></i></div>
+            <h3 class="service-title">E-Commerce Development</h3>
+            <p class="service-description">Building complete e-commerce solutions with product management, payment integration, and seamless shopping experiences.</p>
+          </div>
+
+          <div class="service-card glass scroll-reveal">
+            <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+            <h3 class="service-title">Portfolio Development</h3>
+            <p class="service-description">Designing and developing premium portfolio websites that showcase your work professionally and make lasting impressions.</p>
+          </div>
+
+          <div class="service-card glass scroll-reveal">
+            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="service-title">Web App Development</h3>
+            <p class="service-description">Creating full-stack web applications with modern frameworks, real-time features, and scalable architecture.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 13. TESTIMONIALS SECTION ==================== -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Testimonials</h2>
+        <p class="section-subtitle scroll-reveal">What my clients say</p>
+        <div class="testimonials-wrapper scroll-reveal">
+          <div class="testimonials-slider">
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"Muhammad delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and technical expertise made the entire process smooth and professional. Highly recommended!"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-info">
+                  <h4 class="testimonial-name">Ahmed Khan</h4>
+                  <span class="testimonial-position">CEO at TechStart</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"Working with Muhammad was a fantastic experience. He built our AI tutoring platform with incredible precision and creativity. The platform has transformed how our students learn and engage."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-info">
+                  <h4 class="testimonial-name">Sarah Johnson</h4>
+                  <span class="testimonial-position">Product Manager</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"Muhammad is a highly skilled developer who consistently delivers outstanding results. His Chrome extension development skills are top-notch, and he always goes above and beyond."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-info">
+                  <h4 class="testimonial-name">Ali Raza</h4>
+                  <span class="testimonial-position">Startup Founder</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="testimonial-nav">
+            <button class="testimonial-prev glass" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots">
+              <span class="testimonial-dot active"></span>
+              <span class="testimonial-dot"></span>
+              <span class="testimonial-dot"></span>
+            </div>
+            <button class="testimonial-next glass" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 14. ACHIEVEMENTS SECTION ==================== -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Achievements</h2>
+        <p class="section-subtitle scroll-reveal">Numbers that speak</p>
+        <div class="achievements-grid scroll-reveal">
+
+          <div class="achievement-item glass">
+            <div class="achievement-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="achievement-number"><span class="counter" data-target="50">0</span>+</div>
+            <div class="achievement-label">Projects Completed</div>
+          </div>
+
+          <div class="achievement-item glass">
+            <div class="achievement-icon"><i class="fas fa-smile"></i></div>
+            <div class="achievement-number"><span class="counter" data-target="30">0</span>+</div>
+            <div class="achievement-label">Happy Clients</div>
+          </div>
+
+          <div class="achievement-item glass">
+            <div class="achievement-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="achievement-number"><span class="counter" data-target="10">0</span>+</div>
+            <div class="achievement-label">Technologies</div>
+          </div>
+
+          <div class="achievement-item glass">
+            <div class="achievement-icon"><i class="fas fa-award"></i></div>
+            <div class="achievement-number"><span class="counter" data-target="15">0</span>+</div>
+            <div class="achievement-label">Certificates</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 15. CERTIFICATES SECTION ==================== -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Certificates</h2>
+        <p class="section-subtitle scroll-reveal">My certifications and courses</p>
+        <div class="certificates-grid">
+
+          <div class="certificate-card glass scroll-reveal">
+            <div class="certificate-icon"><i class="fas fa-certificate"></i></div>
+            <h3 class="certificate-title">Web Development Professional</h3>
+            <p class="certificate-description">Comprehensive web development certification covering HTML, CSS, JavaScript, and modern frameworks.</p>
+          </div>
+
+          <div class="certificate-card glass scroll-reveal">
+            <div class="certificate-icon"><i class="fab fa-js"></i></div>
+            <h3 class="certificate-title">JavaScript Advanced</h3>
+            <p class="certificate-description">Advanced JavaScript certification including ES6+, async programming, and design patterns.</p>
+          </div>
+
+          <div class="certificate-card glass scroll-reveal">
+            <div class="certificate-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="certificate-title">AI & Machine Learning</h3>
+            <p class="certificate-description">Fundamentals of artificial intelligence, machine learning algorithms, and practical AI applications.</p>
+          </div>
+
+          <div class="certificate-card glass scroll-reveal">
+            <div class="certificate-icon"><i class="fab fa-chrome"></i></div>
+            <h3 class="certificate-title">Chrome Extension Development</h3>
+            <p class="certificate-description">Specialized certification in building Chrome browser extensions with Manifest V3.</p>
+          </div>
+
+          <div class="certificate-card glass scroll-reveal">
+            <div class="certificate-icon"><i class="fas fa-store"></i></div>
+            <h3 class="certificate-title">E-Commerce Development</h3>
+            <p class="certificate-description">Complete e-commerce development covering online store creation, payment gateways, and inventory management.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 16. LANGUAGES SECTION ==================== -->
+    <section id="languages" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Languages</h2>
+        <p class="section-subtitle scroll-reveal">Languages I speak</p>
+        <div class="languages-grid">
+
+          <div class="language-card glass scroll-reveal">
+            <div class="language-flag"><i class="fas fa-language"></i></div>
+            <h3 class="language-name">Urdu</h3>
+            <span class="language-level">Native</span>
+            <div class="skill-bar">
+              <div class="language-progress skill-progress" data-progress="100"></div>
+            </div>
+          </div>
+
+          <div class="language-card glass scroll-reveal">
+            <div class="language-flag"><i class="fas fa-language"></i></div>
+            <h3 class="language-name">English</h3>
+            <span class="language-level">Professional</span>
+            <div class="skill-bar">
+              <div class="language-progress skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+
+          <div class="language-card glass scroll-reveal">
+            <div class="language-flag"><i class="fas fa-language"></i></div>
+            <h3 class="language-name">Arabic</h3>
+            <span class="language-level">Basic</span>
+            <div class="skill-bar">
+              <div class="language-progress skill-progress" data-progress="30"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 17. CONTACT SECTION ==================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Contact Me</h2>
+        <p class="section-subtitle scroll-reveal">Let's work together</p>
+        <div class="contact-grid">
+
+          <div class="contact-info scroll-reveal">
+            <div class="contact-item glass">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>muhammadtahag8t@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item glass">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p>+92 3006412868</p>
+              </div>
+            </div>
+            <div class="contact-item glass">
+              <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Punjab, Pakistan</p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="mailto:muhammadtahag8t@gmail.com" class="social-link glass" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="tel:+923006412868" class="social-link glass" aria-label="Phone"><i class="fas fa-phone"></i></a>
+              <a href="#" class="social-link glass" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link glass" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper glass scroll-reveal">
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Your Name</label>
+                  <input class="form-input" id="name" type="text" placeholder="Muhammad Taha" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Your Email</label>
+                  <input class="form-input" id="email" type="email" placeholder="email@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input class="form-input" id="subject" type="text" placeholder="Project Inquiry" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-textarea" id="message" placeholder="Tell me about your project..." required rows="5"></textarea>
+              </div>
+              <button class="btn-primary form-submit" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="map-container scroll-reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401584.258763792!2d69.33100675!3d30.37532185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPunjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location Map - Punjab, Pakistan">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 18. FOOTER ==================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a class="footer-logo neon-text" href="#hero">MT.</a>
+          <p>Passionate Web Developer & AI Solutions Developer creating modern digital experiences.</p>
+          <div class="footer-social">
+            <a href="mailto:muhammadtahag8t@gmail.com" class="social-link glass" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+923006412868" class="social-link glass" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="#" class="social-link glass" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link glass" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-envelope"></i> muhammadtahag8t@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +92 3006412868</p>
+          <p><i class="fas fa-location-dot"></i> Punjab, Pakistan</p>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Muhammad Taha. All rights reserved.</p>
+        <a class="back-to-top glass" href="#hero" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
